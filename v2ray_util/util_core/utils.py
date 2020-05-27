@@ -143,11 +143,7 @@ def is_ipv4(ip):
     return True
  
 def is_ipv6(ip):
-    try:
-        socket.inet_pton(socket.AF_INET6, ip)
-    except socket.error:  # not a valid ip
-        return False
-    return True
+    return False
  
 def check_ip(ip):
     return is_ipv4(ip) or is_ipv6(ip)
